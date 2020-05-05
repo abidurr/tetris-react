@@ -69,7 +69,7 @@ const Tetris = () => {
                     </div>
                     )}
                     <StartButton 
-                        onClick={startGame}
+                        callback={startGame}
                     />
                 </aside>
             </StyledTetris>
