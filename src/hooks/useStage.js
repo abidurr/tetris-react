@@ -21,10 +21,15 @@ export const useStage = (player, resetPlayer) => {
                     }
                 })
             })
+            // check if collision
+            if (player.collided) {
+                resetPlayer()
+            }
+
             return newStage
         }
         setStage(prev => updateStage(prev))
-    }, [player])
+    }, [player, resetPlayer])
 
     return [stage, setStage]
 }
